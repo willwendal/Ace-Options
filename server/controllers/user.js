@@ -59,7 +59,7 @@ const sell = async (req, res) => {
   try {
     const user = await User.findOne( {email: req.body.email} );
     user.portfolio = user.portfolio.filter(option => option._id !== req.body.id);
-    user.balance =+ req.body.pl;
+    user.balance = user.balance + req.body.pl;
     await user.save();
     res.send();
   }

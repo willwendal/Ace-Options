@@ -1,5 +1,6 @@
 const fetch = require('cross-fetch');
 const Option = require('./models/option');
+require('dotenv')
 
 const companies = ['Alphabet','Lululemon','Tesla','Amazon','Netflix','Apple','Citigroup','Twitter','Halliburton','Adobe','Allegion','Amcor','Exelon','MetLife','Microsoft'];
 
@@ -12,7 +13,7 @@ const populate = async () => {
       const res = await fetch(`https://sandbox.tradier.com/v1/markets/search?q=${companies[i]}&indexes=false`, {
         headers: {
           "Content-Type": "application/json",
-          "Authorization": "Bearer wvP7ieyXcMVQgpYka5OevRLcDjIu",
+          "Authorization": `Bearer ${process.env.API_KEY}`,
           "Accept": "application/json"
         }
       });
@@ -31,7 +32,7 @@ const populate = async () => {
       const expirations = await fetch(`https://sandbox.tradier.com/v1/markets/options/expirations?symbol=${option.symbol}`, {
         headers: {
           "Content-Type": "application/json",
-          "Authorization": "Bearer wvP7ieyXcMVQgpYka5OevRLcDjIu",
+          "Authorization": `Bearer ${process.env.API_KEY}`,
           "Accept": "application/json"
         }
       });
@@ -40,7 +41,7 @@ const populate = async () => {
       const firstChain = await fetch(`https://sandbox.tradier.com/v1/markets/options/chains?symbol=${option.symbol}&expiration=${parsedExpirations.expirations.date[0]}`, {
         headers: {
           "Content-Type": "application/json",
-          "Authorization": "Bearer wvP7ieyXcMVQgpYka5OevRLcDjIu",
+          "Authorization": `Bearer ${process.env.API_KEY}`,
           "Accept": "application/json"
         }
       });
@@ -53,7 +54,7 @@ const populate = async () => {
       const secondChain = await fetch(`https://sandbox.tradier.com/v1/markets/options/chains?symbol=${option.symbol}&expiration=${parsedExpirations.expirations.date[1]}`, {
         headers: {
           "Content-Type": "application/json",
-          "Authorization": "Bearer wvP7ieyXcMVQgpYka5OevRLcDjIu",
+          "Authorization": `Bearer ${process.env.API_KEY}`,
           "Accept": "application/json"
         }
       });
