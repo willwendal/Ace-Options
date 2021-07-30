@@ -65,8 +65,6 @@ function App() {
       <Navbar 
         userState={userState}
         authentication={authentication}
-        
-        
         authentication={authentication}
         setAuthentication={setAuthentication}
       /> 

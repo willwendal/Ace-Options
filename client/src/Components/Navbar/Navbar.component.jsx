@@ -2,10 +2,9 @@ import React from 'react'
 import Email from '../Email/Email.component';
 import Balance from '../Balance/Balance.component';
 
-// remember to export these in the App.js file
+
 export default function Navbar( { userState, authentication, setAuthentication } ) {
 
-  
 
   return (
     <div className="Navbar">

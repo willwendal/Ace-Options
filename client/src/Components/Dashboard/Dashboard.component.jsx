@@ -5,14 +5,7 @@ import Market from '../Market/Market.component';
 
 export default function Dashboard({ userState, setUserState, getAllCompanies, optionToWatchlist, optionToPortfolio }) {
 
-  const [selectedView, changeSelectedView] = useState(false);
-  // default value?? if false --> show watchlist, otherwise --> show portfolio ???
-
-  const [watchlist, setWatchlist] = useState([]);
-  //double-check the default value
-
-  const [portfolio, setPortfolio] = useState([]);
-  // double-check the default value
+  
 
   
 
@@ -20,8 +13,15 @@ export default function Dashboard({ userState, setUserState, getAllCompanies, op
     <div className="Dashboard">
       <User 
         userState={userState}
+        setUserState={setUserState}
       />
-      {/* <Market /> */}
+      <Market 
+        userState={userState}
+        setUserState={setUserState}
+        getAllCompanies={getAllCompanies}
+        optionToWatchlist={optionToWatchlist}
+        optionToPortfolio={optionToPortfolio}
+      />
     </div>
   )
 }
