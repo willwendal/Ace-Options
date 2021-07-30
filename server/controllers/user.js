@@ -48,7 +48,7 @@ const addToPortfolio = async (req, res) => {
     const user = await User.findOne( {email: req.body.email} );
     console.log(user);
     user.portfolio.push(req.body.option);
-    user.balance = user.balance - req.body.buyPrice;
+    user.balance = user.balance - req.body.buyPrice; // multiply by the contract size
     await user.save();
     res.send();
   }

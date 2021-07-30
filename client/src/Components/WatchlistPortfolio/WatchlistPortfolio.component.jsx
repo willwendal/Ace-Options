@@ -10,16 +10,14 @@ export default function WatchlistPortfolio({ selectedView, userState, setUserSta
   // console.log('selectedView', selectedView)
 
   const watchlistItems = userState.watchlist.map(option => {
-    <WatchlistOption
+    return (<WatchlistOption
       id={option._id}
       option={option}
-    />
+    />)
   })
 
-  console.log('mmmmm', userState)
 
   const portfolioItems = userState.portfolio.map(option => {
-
     return (<PortfolioOption 
       id={option._id}
       option={option}
