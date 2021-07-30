@@ -19,12 +19,12 @@ const userSchema = new Schema({
   }],
   portfolio: [{
     symbol: String, // long symbol
+    description: String,
     option_type: String,
     contract_size: Number,
-    buy_price: Number, //equal to ask at the time you bought
+    buy_price: Number, // equal to ask at the time you bought
     strike: Number,
     expiration_date: String,
-    profit_loss: Number //calculation; involves doing an API request
   }]
 })
 

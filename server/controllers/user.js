@@ -4,7 +4,10 @@ const User = require('../models/user');
 
 const getUser = async (req, res) => {
   try {
-    const selectedUser = await User.find({ email: req.params.email }); // pass in the email
+    const selectedUser = await User.findOne({ 
+      email: req.body.email,
+      password: req.body.password
+    });
     res.status(200);
     res.send(selectedUser);
   }
