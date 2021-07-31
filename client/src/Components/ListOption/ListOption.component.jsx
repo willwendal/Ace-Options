@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'; 
+import { BrowserRouter as Router, Switch, Route, Link, Redirect } from 'react-router-dom'; 
 import OptionChain from '../OptionChain/OptionChain.component'
 
 export default function ListOption({ company }) {
