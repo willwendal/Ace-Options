@@ -1,7 +1,7 @@
 // import fetch from 'cross-fetch';
 import { useState, useEffect } from 'react';
 // import { getUser } from '../../server/controllers/user';
-import { findUser, addUser, getCompanies, addOptionToWatchlist, addOptionToPortfolio } from './Services/ApiService';
+import { findUser, addUser, addOptionToWatchlist, addOptionToPortfolio } from './Services/ApiService';
 // remember to import context here after creating it
 import './App.css';
 import Navbar from './Components/Navbar/Navbar.component';
@@ -16,15 +16,6 @@ function App() {
   // authentication state
   const [authentication, setAuthentication] = useState(false);
   // if false --> user not logged in, true --> user is logged in
-
-  // companies list state --> move it to the company list component
-  const [companiesList, setCompaniesList] = useState([]);
-
-
-
-
-  
-
 
 
   // handler functions
@@ -42,11 +33,6 @@ function App() {
     setAuthentication(true);
   }
 
-  async function getAllCompanies() {
-    const allCompanies = await getCompanies();
-    console.log(allCompanies);
-    setCompaniesList(allCompanies);
-  }
 
   async function optionToWatchlist(option) {
     await addOptionToWatchlist(option);
@@ -56,6 +42,14 @@ function App() {
   async function optionToPortfolio(option) {
     await addOptionToPortfolio(option);
     setUserState((prevUser) => ({...prevUser, portfolio: [...prevUser.portfolio, option]}));
+  }
+
+  async function deleteFromWatchlist() {
+
+  }
+
+  async function deleteFromPortfolio() {
+ 
   }
 
 
@@ -78,7 +72,7 @@ function App() {
         <Dashboard 
           userState={userState}
           setUserState={setUserState}
-          getAllCompanies={getAllCompanies}
+          // getAllCompanies={getAllCompanies}
           optionToWatchlist={optionToWatchlist}
           optionToPortfolio={optionToPortfolio}
         />} 

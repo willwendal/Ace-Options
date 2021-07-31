@@ -3,11 +3,8 @@ import { useState, useEffect } from 'react';
 import User from '../User/User.component';
 import Market from '../Market/Market.component';
 
-export default function Dashboard({ userState, setUserState, getAllCompanies, optionToWatchlist, optionToPortfolio }) {
+export default function Dashboard({ userState, setUserState, optionToWatchlist, optionToPortfolio }) {
 
-  
-
-  
 
   return (
     <div className="Dashboard">
@@ -18,7 +15,7 @@ export default function Dashboard({ userState, setUserState, getAllCompanies, op
       <Market 
         userState={userState}
         setUserState={setUserState}
-        getAllCompanies={getAllCompanies}
+        // getAllCompanies={getAllCompanies}
         optionToWatchlist={optionToWatchlist}
         optionToPortfolio={optionToPortfolio}
       />

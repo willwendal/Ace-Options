@@ -40,7 +40,7 @@ export default function WatchlistPortfolio({ selectedView, userState, setUserSta
     
     <div className="WatchlistPortfolio">
 
-      <h3>{titleState}</h3>
+      <h2>{titleState}</h2>
 
       {titleState === 'Portfolio' ? 
         <div>{portfolioItems}</div>

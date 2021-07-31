@@ -33,7 +33,7 @@ const createUser = async (req, res) => {
 const addToWatchlist = async (req, res) => {
   try {
     const user = await User.findOne( {email: req.body.email} );
-    user.watchlist.push(req.body.option);
+    user.watchlist.push(req.body.option); // this data should come from the company and not the option chain
     await user.save();
     res.send();
   }
@@ -49,6 +49,8 @@ const addToPortfolio = async (req, res) => {
     console.log(user);
     user.portfolio.push(req.body.option);
     user.balance = user.balance - req.body.buyPrice; // multiply by the contract size
+    // this should be user.balance = user.balance - req.body.option.ask*req.body.option.contract_size 
+    // because the "buy price" you want to show on the browser is just the ask multiplied by the contract size
     await user.save();
     res.send();
   }

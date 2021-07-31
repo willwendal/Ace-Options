@@ -1,5 +1,7 @@
 // import fetch from "cross-fetch";
 
+const { default: fetch } = require("cross-fetch");
+
 const baseUrl = 'http://localhost:3001/';
 
 const findUser = async (email, password) => {
@@ -49,6 +51,14 @@ const addOptionToPortfolio = async (option, email) => {
     }
   });
   return await res.json();
+}
+
+const deleteOptionFromWatchlist = async () => {
+  
+}
+
+const deleteOptionFromPortfolio = async () => {
+  
 }
 
 

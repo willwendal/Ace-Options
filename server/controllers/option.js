@@ -1,12 +1,13 @@
 'use strict';
 
-const option = require('../models/option');
+const Option = require('../models/option');
 
 
-exports.getOptions = (req, res) => {
+exports.getOptions = async (req, res) => {
   try {
-    const options = option.getAll();
+    const options = await Option.find({}); // find() //getAll()
     res.status(200);
+    // console.log(options);
     res.send(options);
   }
   catch (e) {
@@ -14,3 +15,4 @@ exports.getOptions = (req, res) => {
     res.sendStatus(400);
   }
 };
+
