@@ -1,0 +1,19 @@
+.firstname-input {
+  display: inline-flex;
+  margin: 0em 0em 1em 0em;
+  height: 2em;
+  width: 20em;
+  font-size: large;
+  border: solid rgb(11, 224, 160);
+  border-radius: 5px;
+}
+
+.lastname-input {
+  display: inline-flex;
+  margin: 0em 0em 1em 0em;
+  height: 2em;
+  width: 20em;
+  font-size: large;
+  border: solid rgb(11, 224, 160);
+  border-radius: 5px;
+}

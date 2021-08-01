@@ -1,9 +1,10 @@
-
+import './Email.css';
 
 export default function Email({ userState }) {
   return (
     <div className="Email">
-      {userState.email}
+      User: 
+      <div id="email-box">{ userState.email}</div>
     </div>
   )
 }

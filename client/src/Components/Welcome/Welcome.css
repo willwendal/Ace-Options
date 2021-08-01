@@ -1,0 +1,60 @@
+/* .Welcome {
+  background-image: url("app_background.png");
+} */
+
+#static-info {
+  float: left;
+  width: 67%;
+  border: solid black;
+  margin: 0em 0em 0em 1em;
+  height: 47em;
+  color:rgb(87, 12, 207);
+}
+
+#welcome-message {
+  border: solid black;
+  margin: 1em 1em 1em 1em;
+  padding: 0em 0em 0em 0em;
+}
+
+
+h2 {
+  font-weight: bold;
+  font-size: 50px;
+  margin: 0em 0em 0em 0em;
+}
+
+
+p {
+  font-size: 35px;
+  margin: 0em 1.5em 1em 1.5em;
+  border: solid black;
+  
+}
+
+#unstatic-info {
+  float: right;
+  width: 30%;
+  height: 47em;
+  border: solid black;
+  margin: 0em 1em 0em 0em;
+}
+
+#buttons-register-login {
+  color: white;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  background-color: rgb(87, 12, 207);
+  margin: 2em 0.2em 2em 0em;
+  padding: 0.2em 0.4em 0.2em 0.4em;
+  font-size: 30px;
+}
+
+.button {
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  color: white;
+}

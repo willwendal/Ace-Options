@@ -1,4 +1,4 @@
-
+import './Register.css';
 
 export default function Register({ firstNameState, setFirstNameState, lastNameState, setLastNameState, emailState, setEmailState, passwordState, setPasswordState, register }) {
 
@@ -11,6 +11,7 @@ export default function Register({ firstNameState, setFirstNameState, lastNameSt
 
       <form id="register-form" onSubmit={submitHandler}>
 
+      <div id="first-name">
       <input 
           className="firstname-input"
           type="text"
@@ -20,7 +21,9 @@ export default function Register({ firstNameState, setFirstNameState, lastNameSt
             setFirstNameState(e.target.value)
           }}
         />
+      </div>
 
+      <div id="last-name">
         <input 
           className="lastname-input"
           type="text"
@@ -30,7 +33,9 @@ export default function Register({ firstNameState, setFirstNameState, lastNameSt
             setLastNameState(e.target.value)
           }}
         />
+      </div>
 
+      <div id="email">
         <input 
           className="email-input"
           type="text"
@@ -40,7 +45,9 @@ export default function Register({ firstNameState, setFirstNameState, lastNameSt
             setEmailState(e.target.value)
           }}
         />
+      </div>
 
+      <div id="password">
         <input
           className="password-input"
           type="password"
@@ -50,17 +57,23 @@ export default function Register({ firstNameState, setFirstNameState, lastNameSt
             setPasswordState(e.target.value)
           }}
         />
+      </div>
 
+      <div id="password">
         <input
           className="password-input"
           type="password"
           placeholder="Confirm Password"
         />
+      </div>
 
 
 
-        <button type="submit">
-          Register
+        <button 
+          type="submit"
+          id="submit-button"
+        >
+          Go!
         </button>
         
       </form>

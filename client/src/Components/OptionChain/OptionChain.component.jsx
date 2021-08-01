@@ -2,6 +2,9 @@ import React from 'react'
 
 export default function OptionChain({ company }) {
 
+  // give this component a button to go back to the OptionsList component (i.e close the chain)
+  // write the functionality to select one option from the chain and be able to add it to portfolio or watchlist
+
 
   return (
     <div className="OptionChain">

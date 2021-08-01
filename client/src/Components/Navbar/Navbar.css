@@ -1,0 +1,89 @@
+.Navbar {
+  background-color: rgb(11, 224, 160);
+  position: relative;
+  margin: 0em 0em 1em 0em;
+}
+
+.user-info {
+  /* position: fixed; */
+  display: flex;
+  float: right;
+}
+
+
+#logo {
+  display: inline-flex;
+  border-radius: 1em;
+  float: left;
+  /* margin: 0em 0em 0em 0em; */
+  padding: 1em 0em 0em 2em;
+}
+
+#app-name {
+  position: static;
+  display: inline-flex;
+  /* float: left; */
+  text-align: center;
+  padding: 0em 0em 0em 0em;
+  font-size: xx-large;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+h1 {
+  margin: 0.4em 0em 0.4em 0em;
+  font-size: 50px;
+}
+
+h6 {
+  font-size: 15px;
+}
+
+#not-auth-text {
+  display: inline-flex;
+  margin: 0em 0em 0em 0em;
+  float: right;
+  color: white;
+}
+
+#home-button {
+  margin: 0em 2em 0em 0em;
+}
+
+#register-button {
+  margin: 0em 2em 0em 0em;
+}
+
+#login-button {
+  margin: 0em 2em 0em 0em;
+}
+
+#logout-button {
+  display: block;
+  float: left;
+  margin: 0.4em 0.5em 0em 0em;
+  padding: 0.1em 0.3em 0.1em 0.3em;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  background-color: rgb(87, 12, 207);
+  font-size: 20px;
+}
+
+#buttons-register-login {
+  margin: 2em 0.2em 2em 0em;
+  padding: 0.2em 0.4em 0.2em 0.4em;
+  font-size: 30px;
+}
+
+#email-navbar {
+  display: block;
+  margin: 0em 2em 0em 0em;
+}
+
+#balance {
+  display: block;
+  margin: 0em 2em 0em 0em;
+}
+

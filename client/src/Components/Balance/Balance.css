@@ -1,0 +1,9 @@
+.Balance {
+  display: inline-flex;
+  padding: 0.7em 0em 0em 0em;
+}
+
+#balance-box {
+  /* display: inline-flex; */
+  font-weight: bold;
+}

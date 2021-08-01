@@ -1,9 +1,10 @@
-
+import './Balance.css';
 
 export default function Balance({ userState }) {
   return (
     <div className="Balance">
-      {userState.balance}
+      Balance: 
+      <div id="balance-box">${userState.balance}</div>
     </div>
   )
 }

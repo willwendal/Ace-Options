@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import WatchlistPortfolio from '../WatchlistPortfolio/WatchlistPortfolio.component'
+import WatchlistPortfolio from '../WatchlistPortfolio/WatchlistPortfolio.component';
+import './User.css';
 
 export default function User({ userState, setUserState }) {
 
@@ -9,15 +10,19 @@ export default function User({ userState, setUserState }) {
   return (
     <div className="User">
 
-      <button 
-        id="wl-button"
-        onClick={() => changeSelectedView(false)}
-      >Watchlist</button>
+      <div id="buttons">
+        <button 
+          id="wl-button"
+          onClick={() => changeSelectedView(false)}
+          >Watchlist
+        </button>
 
-      <button 
-        id="pf-button"
-        onClick={() => changeSelectedView(true)}
-      >Portfolio</button>
+        <button 
+          id="pf-button"
+          onClick={() => changeSelectedView(true)}
+          >Portfolio
+        </button>
+      </div>
 
       <WatchlistPortfolio
         selectedView={selectedView}
