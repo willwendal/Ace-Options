@@ -39,35 +39,35 @@
 
 
 .chain-headers.description {
-  min-width: 29%;
+  min-width: 17em;
 }
 
 .chain-headers.bid {
-  min-width: 8%;
+  min-width: 5em;
 }
 
 .chain-headers.ask {
-  min-width: 10%;
+  min-width: 5em;
 }
 
 .chain-headers.strike {
-  min-width: 10%;
+  min-width: 5em;
 }
 
 .chain-headers.cont-size {
-  min-width: 13%;
+  min-width: 8em;
 }
 
 .chain-headers.exp-date {
-  min-width: 12%;
+  min-width: 8em;
 }
 
 .chain-headers.type {
-  min-width: 10%;
+  min-width: 5em;
 }
 
 .chain-headers.buttons {
-  min-width: 7%;
+  min-width: 2em;
   color: white;
 }
 
@@ -75,41 +75,45 @@
 #chain-option {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  /* align-items: center; */
 }
 
 #chain-info {
-  display: flex;
-  justify-content: space-around;
+  /* display: flex; */
+  /* justify-content: space-around; */
   /* margin: 0em 0em 2em 0em; */
 }
 
 .chain-info.description {
-  min-width: 31%;
+  min-width: 18.5em;
 }
 
 .chain-info.bid {
-  min-width: 8%;
+  min-width: 5em;
 }
 
 .chain-info.ask {
-  min-width: 10%;
+  min-width: 5em;
 }
 
 .chain-info.strike {
-  min-width: 10%;
+  min-width: 7em;
 }
 
 .chain-info.cont-size {
-  min-width: 10%;
+  min-width: 6em;
 }
 
 .chain-info.exp-date {
-  min-width: 13%;
+  min-width: 8em;
 }
 
 .chain-info.type {
-  min-width: 7%;
+  min-width: 4em;
+}
+
+.chain-info.small-buttons {
+  min-width: 2em;
 }
 
 .chain-info {

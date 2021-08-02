@@ -39,7 +39,7 @@ export default function OptionChain({ company, showList, optionToWatchlist, opti
             <div className="chain-info cont-size">{option.contract_size}</div>
             <div className="chain-info exp-date">{option.expiration_date}</div>
             <div className="chain-info type">{option.option_type}</div>
-            <div id="small-buttons">
+            <div className="chain-info small-buttons">
               <button id="to-wl-button" onClick={() => optionToWatchlist(option)}>🔎</button>
               <button id="to-pf-button" onclick={() => optionToPortfolio(option)}>💼</button>
             </div>
@@ -48,20 +48,19 @@ export default function OptionChain({ company, showList, optionToWatchlist, opti
 
         
           {company.chain.expiration2.map(option => (
-
-          <div id="chain-option">
-            <h6>{option.description}</h6>
-            <h6>{option.bid}</h6>
-            <h6>{option.ask}</h6>
-            <h6>{option.strike}</h6>
-            <h6>{option.contract_size}</h6>
-            <h6>{option.expiration_date}</h6>
-            <h6>{option.option_type}</h6>
-            <div>
-              <button id="to-wl-button" onClick={() => optionToWatchlist(option)}>🔎</button>
-              <button id="to-pf-button" onclick={() => optionToPortfolio(option)}>💼</button>
+            <div id="chain-option">
+              <div className="chain-info description">{option.description}</div>
+              <div className="chain-info bid">{(Math.round(option.bid*100) / 100).toFixed(2)}</div>
+              <div className="chain-info ask">{(Math.round(option.ask*100) / 100).toFixed(2)}</div>
+              <div className="chain-info strike">{option.strike}</div>
+              <div className="chain-info cont-size">{option.contract_size}</div>
+              <div className="chain-info exp-date">{option.expiration_date}</div>
+              <div className="chain-info type">{option.option_type}</div>
+              <div id="small-buttons">
+                <button id="to-wl-button" onClick={() => optionToWatchlist(option)}>🔎</button>
+                <button id="to-pf-button" onclick={() => optionToPortfolio(option)}>💼</button>
+              </div>
             </div>
-          </div>
         ))}
       </div>
       
