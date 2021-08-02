@@ -9,3 +9,7 @@
   display: block;
   overflow: scroll;
 }
+
+.portfolio-headers.exp-date {
+  min-width: 5em;
+}
