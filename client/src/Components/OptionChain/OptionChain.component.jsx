@@ -1,5 +1,6 @@
 import React from 'react';
 import './OptionChain.css';
+import graph from '../../images/graph.png';
 
 export default function OptionChain({ company, showList, optionToWatchlist, optionToPortfolio }) {
 
@@ -41,7 +42,7 @@ export default function OptionChain({ company, showList, optionToWatchlist, opti
             <div className="chain-info type">{option.option_type}</div>
             <div className="chain-info small-buttons">
               <button id="to-wl-button" onClick={() => optionToWatchlist(option)}>🔎</button>
-              <button id="to-pf-button" onclick={() => optionToPortfolio(option)}>💼</button>
+              <button id="to-pf-button" onclick={() => optionToPortfolio(option)}>🤑</button>
             </div>
           </div>
         ))}
@@ -58,10 +59,14 @@ export default function OptionChain({ company, showList, optionToWatchlist, opti
               <div className="chain-info type">{option.option_type}</div>
               <div id="small-buttons">
                 <button id="to-wl-button" onClick={() => optionToWatchlist(option)}>🔎</button>
-                <button id="to-pf-button" onclick={() => optionToPortfolio(option)}>💼</button>
+                <button id="to-pf-button" onclick={() => optionToPortfolio(option)}>🤑</button>
               </div>
             </div>
         ))}
+      </div>
+
+      <div>
+        <img id="graph" src={graph} alt="GRAPH GOES HERE"></img>
       </div>
       
 

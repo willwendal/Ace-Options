@@ -4,6 +4,7 @@ import User from '../User/User.component';
 import Market from '../Market/Market.component';
 import './Dashboard.css';
 
+
 export default function Dashboard({ userState, setUserState, optionToWatchlist, optionToPortfolio }) {
 
 
@@ -14,6 +15,7 @@ export default function Dashboard({ userState, setUserState, optionToWatchlist, 
         <User 
           userState={userState}
           setUserState={setUserState}
+          optionToPortfolio={optionToPortfolio}
         />
       </div>
 

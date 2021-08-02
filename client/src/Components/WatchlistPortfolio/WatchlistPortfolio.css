@@ -1,4 +1,11 @@
 #pf-wl-title {
   color: rgb(87, 12, 207);
   margin: 0em 0em 0em 0em;
+  display: block;
+  position: sticky;
+}
+
+#wl-or-pf {
+  display: block;
+  overflow: scroll;
 }

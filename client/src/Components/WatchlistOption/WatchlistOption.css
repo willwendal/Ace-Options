@@ -1,17 +1,26 @@
-#watchlist-option {
-  margin: 0em 0em 0em 0em;
+
+.WatchlistOption {
+  display: inline-flex;
+  margin: 1em 0em 0em 0em;
+  /* border: solid rgb(11, 224, 160); */
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
-#symbol {
-  display: inline-flex;
+#wl-to-pf-button {
+  margin: 0em 0em 0em 1em;
+  font-size: 0.6em;
+  padding: 0em 0.5em 0em 0.7em;
+  /* float: right; */
 }
 
-#space {
-  display: inline-flex;
+#remove-from-wl-button {
+  margin: 0em 0em 0em 1em;
+  font-size: 0.6em;
+  padding: 0em 0.5em 0em 0.7em;
+  /* float: right; */
 }
 
-#description {
-  display: inline-flex;
-  margin: 0em 0em 0em 0em;
-  border: solid rgb(11, 224, 160);
-}
+
+
+

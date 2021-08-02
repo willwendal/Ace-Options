@@ -5,7 +5,7 @@ import './WatchlistPortfolio.css';
 
 
 
-export default function WatchlistPortfolio({ selectedView, userState, setUserState }) {
+export default function WatchlistPortfolio({ selectedView, userState, setUserState, optionToPortfolio }) {
 
   const [titleState, setTitleState] = useState('Watchlist');
   // console.log('selectedView', selectedView)
@@ -16,11 +16,11 @@ export default function WatchlistPortfolio({ selectedView, userState, setUserSta
         <WatchlistOption
           id={option._id}
           option={option}
+          optionToPortfolio={optionToPortfolio}
         />
       </div>
     )
   })
-
 
   const portfolioItems = userState.portfolio.map(option => {
     return (
@@ -32,8 +32,6 @@ export default function WatchlistPortfolio({ selectedView, userState, setUserSta
       </div>
     )
   })
-
-
 
   useEffect(() => {
     if (selectedView) {
@@ -50,12 +48,14 @@ export default function WatchlistPortfolio({ selectedView, userState, setUserSta
     <div className="WatchlistPortfolio">
 
       <h2 id="pf-wl-title">{titleState}</h2>
-
+      
       {titleState === 'Portfolio' ? 
-        <div>{portfolioItems}</div>
+        <div id="wl-or-pf">{portfolioItems}</div>
       :
-        <div>{watchlistItems}</div>
+        <div id="wl-or-pf">{watchlistItems}</div>
       }
+
+
 
     </div>
   )

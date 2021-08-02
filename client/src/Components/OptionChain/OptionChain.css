@@ -10,7 +10,7 @@
   display: block;
   /* width: 100%; */
   /* min-width: 100%; */
-  margin: 0em 0em 0em 0em;
+  margin: 0em 0em 1em 0em;
   /* border: solid black; */
   height: 3em;
   position: sticky;
@@ -55,7 +55,7 @@
 }
 
 .chain-headers.cont-size {
-  min-width: 8em;
+  min-width: 7em;
 }
 
 .chain-headers.exp-date {
@@ -71,17 +71,17 @@
   color: white;
 }
 
+#the-actual-chain {
+  overflow: scroll;
+  height: 22em;
+  margin: 0em 0em 1em 0em;
+}
+
 
 #chain-option {
   display: flex;
   justify-content: space-around;
   /* align-items: center; */
-}
-
-#chain-info {
-  /* display: flex; */
-  /* justify-content: space-around; */
-  /* margin: 0em 0em 2em 0em; */
 }
 
 .chain-info.description {
@@ -101,7 +101,7 @@
 }
 
 .chain-info.cont-size {
-  min-width: 6em;
+  min-width: 5em;
 }
 
 .chain-info.exp-date {
@@ -136,5 +136,9 @@
   margin: 0em 0.1em 0.3em 0.1em;
 }
 
+#graph {
+  margin: 1em 0em 0em 0em;
+  height: 18em;
+}
 
 

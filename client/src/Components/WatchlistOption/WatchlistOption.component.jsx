@@ -1,12 +1,24 @@
 import './WatchlistOption.css';
 
-export default function WatchlistOption({ option }) {
+export default function WatchlistOption({ option, optionToPortfolio }) {
+
+
+
   return (
     <div className="WatchlistOption">
-      <h6 id="symbol">{option.symbol}</h6>
-      {/* <div id="space">_</div> */}
-      <h6 id="description">{option.description}</h6> 
-      {/* this description is not the right one, it should not come from the option in the chain */}
+      
+      <div>
+        {option.description}
+      </div>
+
+      <div>
+        <button id="wl-to-pf-button" onClick={() => optionToPortfolio(option)}>🤑</button>
+      </div>
+
+      <div>
+        <button id="remove-from-wl-button" onClick={() => optionToPortfolio(option)}>❌</button>
+      </div>
+        
     </div>
   )
 }

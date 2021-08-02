@@ -1,11 +1,14 @@
 #buttons {
-  margin: 2em 0em 0em 0em;
+  padding: 2em 0em 0em 0em;
+  display: block;
+  position: sticky;
 }
 
 #pf-button {
-  background-color: rgb(11, 224, 160);
+  /* background-color: rgb(11, 224, 160); */
+  background-color: rgb(87, 12, 207);
 }
 
 #wl-button {
-  background-color: rgb(11, 224, 160);
+  background-color: rgb(87, 12, 207);
 }
