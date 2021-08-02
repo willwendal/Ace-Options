@@ -39,15 +39,15 @@
 
 
 .chain-headers.description {
-  min-width: 32%;
+  min-width: 29%;
 }
 
 .chain-headers.bid {
-  min-width: 9%;
+  min-width: 8%;
 }
 
 .chain-headers.ask {
-  min-width: 9%;
+  min-width: 10%;
 }
 
 .chain-headers.strike {
@@ -55,7 +55,7 @@
 }
 
 .chain-headers.cont-size {
-  min-width: 12%;
+  min-width: 13%;
 }
 
 .chain-headers.exp-date {
@@ -85,7 +85,7 @@
 }
 
 .chain-info.description {
-  min-width: 32%;
+  min-width: 31%;
 }
 
 .chain-info.bid {
@@ -97,7 +97,7 @@
 }
 
 .chain-info.strike {
-  min-width: 8%;
+  min-width: 10%;
 }
 
 .chain-info.cont-size {
@@ -109,7 +109,7 @@
 }
 
 .chain-info.type {
-  min-width: 6%;
+  min-width: 7%;
 }
 
 .chain-info {
