@@ -17,3 +17,7 @@
   border: solid rgb(11, 224, 160);
   border-radius: 5px;
 }
+
+#create-account-button {
+  margin: 1.5em 0em 0em 0em;
+}

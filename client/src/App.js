@@ -35,13 +35,13 @@ function App() {
 
 
   async function optionToWatchlist(option) {
-    await addOptionToWatchlist(option);
+    await addOptionToWatchlist(option, userState.email);
     setUserState((prevUser) => ({...prevUser, watchlist: [...prevUser.watchlist, option]}));
   }
 
   async function optionToPortfolio(option) {
-    await addOptionToPortfolio(option);
-    setUserState((prevUser) => ({...prevUser, portfolio: [...prevUser.portfolio, option]}));
+    await addOptionToPortfolio(option, userState.email);
+    setUserState((prevUser) => ({...prevUser, portfolio: [...prevUser.portfolio, option], balance: prevUser.balance - option.ask*option.contract_size}));
   }
 
   async function deleteFromWatchlist() {

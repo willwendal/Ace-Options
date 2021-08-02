@@ -1,3 +1,11 @@
 #buttons {
   margin: 2em 0em 0em 0em;
 }
+
+#pf-button {
+  background-color: rgb(11, 224, 160);
+}
+
+#wl-button {
+  background-color: rgb(11, 224, 160);
+}

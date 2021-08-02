@@ -1,7 +1,10 @@
 .Navbar {
-  background-color: rgb(11, 224, 160);
+  /* background-color: rgb(11, 224, 160); */
+  background-color: rgb(87, 12, 207);
   position: relative;
   margin: 0em 0em 1em 0em;
+  height: 6em;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .user-info {
@@ -10,28 +13,29 @@
   float: right;
 }
 
-
 #logo {
   display: inline-flex;
   border-radius: 1em;
   float: left;
   /* margin: 0em 0em 0em 0em; */
-  padding: 1em 0em 0em 2em;
+  padding: 0.5em 0em 0em 1em;
+  height: 5em;
+  width: 5em;
 }
 
 #app-name {
   position: static;
   display: inline-flex;
-  /* float: left; */
-  text-align: center;
-  padding: 0em 0em 0em 0em;
+  float: left;
+  /* text-align: center; */
+  padding: 0.2em 0em 0em 0em;
+  margin: 0em 0em 0em 0.5em;
   font-size: xx-large;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: white;
 }
 
 h1 {
-  margin: 0.4em 0em 0.4em 0em;
+  margin: 0.25em 0em 0em 0em;
   font-size: 50px;
 }
 
@@ -63,11 +67,12 @@ h6 {
   float: left;
   margin: 0.4em 0.5em 0em 0em;
   padding: 0.1em 0.3em 0.1em 0.3em;
-  color: white;
+  color: black;
   border: none;
   border-radius: 4px;
   text-align: center;
-  background-color: rgb(87, 12, 207);
+  /* background-color: rgb(87, 12, 207); */
+  background-color: rgb(11, 224, 160);
   font-size: 20px;
 }
 
@@ -80,10 +85,12 @@ h6 {
 #email-navbar {
   display: block;
   margin: 0em 2em 0em 0em;
+  color: white;
 }
 
 #balance {
   display: block;
   margin: 0em 2em 0em 0em;
+  color: white;
 }
 

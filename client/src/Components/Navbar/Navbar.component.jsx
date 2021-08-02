@@ -1,7 +1,8 @@
 import React from 'react'
 import Email from '../Email/Email.component';
 import Balance from '../Balance/Balance.component';
-import './Navbar.css'
+import './Navbar.css';
+import appLogo from '../../images/app_logo.png';
 
 
 
@@ -12,12 +13,12 @@ export default function Navbar( { userState, authentication, setAuthentication }
     <div className="Navbar">
 
       <div id="logo">
-        <img src="users/andres/Desktop/Codeworks/Week7/solo-andres/client/images/app_logo.png" alt="LOGO"></img>
+        <img src={appLogo} alt="LOGO"></img>
       </div>
 
       <div id="app-name">
         <h1>ace options</h1>
-        {/* <img src="" alt="logo text"></img> */}
+        {/* <img src={appName} alt="ace-options"></img> */}
       </div>
       
 
@@ -59,11 +60,11 @@ export default function Navbar( { userState, authentication, setAuthentication }
         </div>
 
         <div id="login-button">
-          <h6>Log In</h6>
+          <h6>Our Technology</h6>
         </div>
 
         <div id="register-button">
-          <h6>Register</h6>
+          <h6>Help Center</h6>
         </div>
 
       </div>

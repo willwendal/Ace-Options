@@ -1,19 +1,20 @@
 #user-component {
   float: left;
-  width: 55%;
+  width: 48%;
   height: 49em;
   margin: 0em 0em 0em 1em;
   overflow: scroll;
-  border: solid black;
+  /* border: solid rgb(11, 224, 160); */
+  border: solid rgb(87, 12, 207);
 }
 
 #market-component {
   float: right;
-  width: 40%;
+  width: 48%;
   height: 49em;
   margin: 0em 1em 0em 0em;
   overflow: scroll;
-  border: solid black;
+  border: solid rgb(11, 224, 160);
 }
 
 button {

@@ -14,13 +14,13 @@ export default function User({ userState, setUserState }) {
         <button 
           id="wl-button"
           onClick={() => changeSelectedView(false)}
-          >Watchlist
+          >🔎 Watchlist
         </button>
 
         <button 
           id="pf-button"
           onClick={() => changeSelectedView(true)}
-          >Portfolio
+          >💼 Portfolio
         </button>
       </div>
 

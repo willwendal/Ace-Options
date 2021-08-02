@@ -1,3 +1,7 @@
+#watchlist-option {
+  margin: 0em 0em 0em 0em;
+}
+
 #symbol {
   display: inline-flex;
 }
@@ -8,4 +12,6 @@
 
 #description {
   display: inline-flex;
+  margin: 0em 0em 0em 0em;
+  border: solid rgb(11, 224, 160);
 }

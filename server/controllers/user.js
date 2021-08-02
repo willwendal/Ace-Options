@@ -45,10 +45,11 @@ const addToWatchlist = async (req, res) => {
 
 const addToPortfolio = async (req, res) => {
   try {
-    const user = await User.findOne( {email: req.body.email} );
+    const {email, option} = req.body;
+    const user = await User.findOne( {email} );
     console.log(user);
-    user.portfolio.push(req.body.option);
-    user.balance = user.balance - req.body.buyPrice; // multiply by the contract size
+    user.portfolio.push(option);
+    user.balance = user.balance - option.ask*option.contract_size; // multiply by the contract size
     // this should be user.balance = user.balance - req.body.option.ask*req.body.option.contract_size 
     // because the "buy price" you want to show on the browser is just the ask multiplied by the contract size
     await user.save();

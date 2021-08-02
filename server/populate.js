@@ -2,7 +2,15 @@ const fetch = require('cross-fetch');
 const Option = require('./models/option');
 require('dotenv').config()
 
-const companies = ['Alphabet','Lululemon','Tesla','Amazon','Netflix','Apple','Citigroup','Twitter','Halliburton','Adobe','Allegion','Amcor','Exelon','MetLife','Microsoft'];
+const companies = ['3M', 'Abiomed', 'Accenture', 'Adobe', 'Aflac', 'Allegion', 'Alphabet', 'Amazon', 
+'Amcor', 'Ametek', 'Amgen', 'Ansys', 'Anthem', 'Aon', 'Apple', 'Aptiv', 'ADM', 'Assurant', 'Autodesk', 
+'AutoZone', 'Biogen', 'Broadcom', 'CarMax', 'Catalent', 'Caterpillar', 'CBRE', 'CDW', 'Celanese', 'Cerner', 
+'Chubb', 'Cigna', 'Citigroup', 'Clorox', 'Comcast', 'Comerica', 'Copart', 'Corning', 'Corteva', 'Costco',  
+'Lululemon','Netflix','Twitter','Halliburton','Adobe','Allegion','Amcor','Exelon','MetLife','Microsoft', 
+'Newmont', 'Oracle', 'PayPal', 'PepsiCo', 'Pentair', 'Perrigo', 'Pfizer', 'Prologis', 'PulteGroup', 'PVH', 
+'Qorvo', 'Qualcomm', 'ResMed', 'Rollins', 'Salesforce', 'Schlumberger', 'Starbucks', 'Synopsys', 'Sysco', 
+'Tapestry', 'Teleflex', 'Teradyne', 'Tesla', 'Textron', 'Trimble', 'Twitter', 'UDR', 'Ventas', 'Verisign', 'Visa', 
+'Wabtec', 'Walmart', 'Welltower', 'WestRock', 'Xilinx', 'Xylem', 'Zoetis'];
 
 const populate = async () => {
   try {

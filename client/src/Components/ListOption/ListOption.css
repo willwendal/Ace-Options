@@ -1,7 +1,44 @@
+/* nav {
+  align-items: center;
+  height: 42px;
+} */
+
 ul {
   list-style-type: none;
+  /* border: solid rgb(87, 12, 207); */
+  /* padding: 0.2em 0em 0em 0em; */
+  margin: 0.5em 2em 0em 2em;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  align-items: center;
 }
 
 li {
   display: inline-flex;
+  color: white;
+  text-decoration: none;
+  width: 33%;
+  /* text-align: center; */
+  /* align-items: center; */
+  margin: 0em 0em 0em 0em;
+  padding: 0em 0em 0em 0em;
 }
+
+link {
+  text-decoration: none;
+}
+
+#information {
+  color: black;
+  margin: 0em 0em 0em 0em;
+  padding: 0em 0em 0em 0em;
+  text-align: center;
+}
+
+#cross {
+  display: inline-flex;
+  height: 2px;
+  width: 2px;
+}
+

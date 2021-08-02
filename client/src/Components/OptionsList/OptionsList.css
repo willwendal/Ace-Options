@@ -1,0 +1,42 @@
+#type {
+  /* color: rgb(87, 12, 207); */
+  color: rgb(11, 224, 160);
+  position: sticky;
+  margin: 0em 0em 0em 0em;
+  padding: 0em 0em 0em 0em;
+}
+
+#both-buttons {
+  margin: 2em 0em 0em 0em;
+  position: sticky;
+}
+
+#headers {
+  margin: 1em 0em 0em 0em;
+  position: sticky;
+}
+
+h4 {
+  margin: 0em 0em 0em 0em;
+  padding: 0em 0em 0em 0em;
+  font-size: 25px;
+  display: inline-flex;
+  width: 30%;
+}
+
+#ticker {
+  margin: 0em 0em 0em 1em;
+}
+
+#underlying-type {
+  /* background-color: rgb(11, 224, 160); */
+  background-color: rgb(87, 12, 207);
+  margin: 0em 0.2em 0.5em 0em;
+}
+
+#search-field {
+  border: solid rgb(87, 12, 207);
+  border-radius: 3px;
+  margin: 0em 0em 0.5em 0em;
+}
+

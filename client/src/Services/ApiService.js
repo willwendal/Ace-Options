@@ -32,25 +32,25 @@ const getCompanies = async () => {
 }
 
 const addOptionToWatchlist = async (option, email) => {
-  const res = await fetch(`${baseUrl}addToWl`, {
+  await fetch(`${baseUrl}addToWl`, {
     method: 'POST',
     body: JSON.stringify ({option, email}),
     headers: {
       "Content-Type": "application/json"
     }
   });
-  return await res.json();
+  // return await res.json();
 }
 
 const addOptionToPortfolio = async (option, email) => {
-  const res = await fetch(`${baseUrl}addToPf`, {
+  await fetch(`${baseUrl}addToPf`, {
     method: 'POST',
     body: JSON.stringify ({option, email}),
     headers: {
       "Content-Type": "application/json"
     }
   });
-  return await res.json();
+  // return await res.json();
 }
 
 const deleteOptionFromWatchlist = async () => {
