@@ -9,6 +9,7 @@ router.post('/register', user.createUser);
 router.get('/options', option.getOptions);
 router.post('/addToWl', user.addToWatchlist);
 router.post('/addToPf', user.addToPortfolio);
+router.put('/removeFromWl', user.removeFromWatchlist)
 router.put('/sell', user.sell);
 
 module.exports = router;

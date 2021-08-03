@@ -61,11 +61,29 @@ const addToPortfolio = async (req, res) => {
   }
 }
 
+const removeFromWatchlist = async (req, res) => {
+  try {
+    const {email, option} = req.body;
+    const user = await User.findOne( {email} );
+    user.watchlist = user.watchlist.filter(userOption => {
+      // console.log({user: `${userOption._id}`, option: `${option._id}`})
+      return `${userOption._id}` !== `${option._id}`});
+    await user.save();
+    res.send();
+  }
+  catch (err) {
+    console.log(err)
+    res.sendStatus(400)
+  }
+}
+
 const sell = async (req, res) => {
   try {
-    const user = await User.findOne( {email: req.body.email} );
-    user.portfolio = user.portfolio.filter(option => option._id !== req.body.id);
-    user.balance = user.balance + req.body.pl;
+    const {email, option} = req.body;
+    const user = await User.findOne( {email} );
+    user.portfolio = user.portfolio.filter(userOption => `${userOption._id}` !== `${option._id}`);
+    // user.balance = user.balance + option.bid*option.contract_size;
+    console.log({user, option})
     await user.save();
     res.send();
   }
@@ -80,5 +98,6 @@ module.exports = {
   createUser,
   addToWatchlist,
   addToPortfolio,
+  removeFromWatchlist,
   sell
 }

@@ -5,7 +5,7 @@ import Market from '../Market/Market.component';
 import './Dashboard.css';
 
 
-export default function Dashboard({ userState, setUserState, optionToWatchlist, optionToPortfolio }) {
+export default function Dashboard({ userState, setUserState, optionToWatchlist, optionToPortfolio, deleteFromWatchlist, deleteFromPortfolio }) {
 
 
   return (
@@ -16,6 +16,8 @@ export default function Dashboard({ userState, setUserState, optionToWatchlist, 
           userState={userState}
           setUserState={setUserState}
           optionToPortfolio={optionToPortfolio}
+          deleteFromWatchlist={deleteFromWatchlist}
+          deleteFromPortfolio={deleteFromPortfolio}
         />
       </div>
 

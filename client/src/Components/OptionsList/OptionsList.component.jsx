@@ -10,7 +10,7 @@ export default function OptionsList({ selectOption }) {
 
   async function getAllCompanies() {
     const allCompanies = await getCompanies();
-    console.log(allCompanies);
+    // console.log(allCompanies);
     setCompaniesList(allCompanies);
   }
 

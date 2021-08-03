@@ -5,29 +5,33 @@ import './WatchlistPortfolio.css';
 
 
 
-export default function WatchlistPortfolio({ selectedView, userState, setUserState, optionToPortfolio }) {
+export default function WatchlistPortfolio({ selectedView, userState, setUserState, optionToPortfolio, deleteFromWatchlist, deleteFromPortfolio }) {
 
   const [titleState, setTitleState] = useState('Watchlist');
   // console.log('selectedView', selectedView)
 
-  const watchlistItems = userState.watchlist.map(option => {
+  const watchlistItems = userState.watchlist.map((option, i) => {
     return (
       <div id="watchlist">
         <WatchlistOption
+          key={option._id + i}
           id={option._id}
           option={option}
           optionToPortfolio={optionToPortfolio}
+          deleteFromWatchlist={deleteFromWatchlist}
         />
       </div>
     )
   })
 
-  const portfolioItems = userState.portfolio.map(option => {
+  const portfolioItems = userState.portfolio.map((option, i) => {
     return (
       <div id="portfolio">
         <PortfolioOption 
+          key={option._id + i}
           id={option._id}
           option={option}
+          deleteFromPortfolio={deleteFromPortfolio}
         />
       </div>
     )
@@ -63,7 +67,7 @@ export default function WatchlistPortfolio({ selectedView, userState, setUserSta
             <div className="portfolio-headers exp-date">Exp.</div>
             <div className="portfolio-headers exp-date">Money</div>
             <div className="portfolio-headers p-l">P&L</div>
-            <div className="portfolio-headers sekk">Sell</div>
+            <div className="portfolio-headers sell">Sell</div>
           </div>
           {portfolioItems}
           </div>

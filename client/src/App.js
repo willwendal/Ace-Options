@@ -1,7 +1,7 @@
 // import fetch from 'cross-fetch';
 import { useState, useEffect } from 'react';
 // import { getUser } from '../../server/controllers/user';
-import { findUser, addUser, addOptionToWatchlist, addOptionToPortfolio } from './Services/ApiService';
+import { findUser, addUser, addOptionToWatchlist, addOptionToPortfolio, deleteOptionFromWatchlist, deleteOptionFromPortfolio } from './Services/ApiService';
 // remember to import context here after creating it
 import './App.css';
 import Navbar from './Components/Navbar/Navbar.component';
@@ -44,12 +44,14 @@ function App() {
     setUserState((prevUser) => ({...prevUser, portfolio: [...prevUser.portfolio, option], balance: prevUser.balance - option.ask*option.contract_size}));
   }
 
-  async function deleteFromWatchlist() {
-
+  async function deleteFromWatchlist(option) {
+    await deleteOptionFromWatchlist(option, userState.email);
+    setUserState((prevUser) => ({...prevUser, watchlist: prevUser.watchlist.filter(userOption => userOption._id !== option._id)}))
   }
 
-  async function deleteFromPortfolio() {
- 
+  async function deleteFromPortfolio(option) {
+    await deleteOptionFromPortfolio(option, userState.email);
+    setUserState((prevUser) => ({...prevUser, portfolio: prevUser.portfolio.filter(userOption => userOption._id !== option._id), balance: prevUser.balance + option.bid*option.contract_size}));
   }
 
 
@@ -75,6 +77,8 @@ function App() {
           // getAllCompanies={getAllCompanies}
           optionToWatchlist={optionToWatchlist}
           optionToPortfolio={optionToPortfolio}
+          deleteFromWatchlist={deleteFromWatchlist}
+          deleteFromPortfolio={deleteFromPortfolio}
         />} 
       
     </div>

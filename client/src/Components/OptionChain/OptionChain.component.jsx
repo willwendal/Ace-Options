@@ -42,7 +42,7 @@ export default function OptionChain({ company, showList, optionToWatchlist, opti
             <div className="chain-info type">{option.option_type}</div>
             <div className="chain-info small-buttons">
               <button id="to-wl-button" onClick={() => optionToWatchlist(option)}>🔎</button>
-              <button id="to-pf-button" onclick={() => optionToPortfolio(option)}>🤑</button>
+              <button id="to-pf-button" onClick={() => optionToPortfolio(option)}>🤑</button>
             </div>
           </div>
         ))}
@@ -59,7 +59,7 @@ export default function OptionChain({ company, showList, optionToWatchlist, opti
               <div className="chain-info type">{option.option_type}</div>
               <div id="small-buttons">
                 <button id="to-wl-button" onClick={() => optionToWatchlist(option)}>🔎</button>
-                <button id="to-pf-button" onclick={() => optionToPortfolio(option)}>🤑</button>
+                <button id="to-pf-button" onClick={() => optionToPortfolio(option)}>🤑</button>
               </div>
             </div>
         ))}

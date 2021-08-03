@@ -3,7 +3,7 @@ import WatchlistPortfolio from '../WatchlistPortfolio/WatchlistPortfolio.compone
 import './User.css';
 import mainBackground from '../../images/main_background.png';
 
-export default function User({ userState, setUserState, optionToPortfolio }) {
+export default function User({ userState, setUserState, optionToPortfolio, deleteFromWatchlist, deleteFromPortfolio }) {
 
   const [selectedView, changeSelectedView] = useState(false);
   // default value?? if false --> show watchlist, otherwise --> show portfolio ???
@@ -30,6 +30,8 @@ export default function User({ userState, setUserState, optionToPortfolio }) {
         userState={userState}
         setUserState={setUserState}
         optionToPortfolio={optionToPortfolio}
+        deleteFromWatchlist={deleteFromWatchlist}
+        deleteFromPortfolio={deleteFromPortfolio}
       />
 
     </div>

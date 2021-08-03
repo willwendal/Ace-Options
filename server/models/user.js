@@ -22,6 +22,8 @@ const userSchema = new Schema({
     description: String,
     option_type: String,
     contract_size: Number,
+    bid: Number,
+    ask: Number,
     buy_price: Number, // equal to ask at the time you bought
     strike: Number,
     expiration_date: String,

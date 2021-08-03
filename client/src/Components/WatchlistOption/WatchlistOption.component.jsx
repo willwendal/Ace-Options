@@ -1,6 +1,6 @@
 import './WatchlistOption.css';
 
-export default function WatchlistOption({ option, optionToPortfolio }) {
+export default function WatchlistOption({ option, optionToPortfolio, deleteFromWatchlist }) {
 
 
 
@@ -16,7 +16,7 @@ export default function WatchlistOption({ option, optionToPortfolio }) {
       </div>
 
       <div>
-        <button id="remove-from-wl-button" onClick={() => optionToPortfolio(option)}>❌</button>
+        <button id="remove-from-wl-button" onClick={() => deleteFromWatchlist(option)}>❌</button>
       </div>
         
     </div>

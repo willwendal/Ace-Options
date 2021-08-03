@@ -53,12 +53,25 @@ const addOptionToPortfolio = async (option, email) => {
   // return await res.json();
 }
 
-const deleteOptionFromWatchlist = async () => {
-  
+const deleteOptionFromWatchlist = async (option, email) => {
+  console.log(option)
+  await fetch(`${baseUrl}removeFromWl`, {
+    method: 'PUT',
+    body: JSON.stringify ({option, email}),
+    headers: {
+      "Content-Type": "application/json"
+    }
+  });
 }
 
-const deleteOptionFromPortfolio = async () => {
-  
+const deleteOptionFromPortfolio = async (option, email) => {
+  await fetch(`${baseUrl}sell`, {
+    method: 'PUT',
+    body: JSON.stringify ({option, email}),
+    headers: {
+      "Content-Type": "application/json"
+    }
+  });
 }
 
 
@@ -67,5 +80,7 @@ module.exports = {
   addUser,
   getCompanies,
   addOptionToWatchlist,
-  addOptionToPortfolio
+  addOptionToPortfolio,
+  deleteOptionFromWatchlist,
+  deleteOptionFromPortfolio,
 }

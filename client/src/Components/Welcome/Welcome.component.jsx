@@ -6,6 +6,10 @@ import appLogo from '../../images/app_logo.png';
 import homeBackground from '../../images/home_background.png';
 import homeFooterLeft from '../../images/footer_left.png';
 import homeFooterRight from '../../images/footer_right.png';
+import snapshot from '../../images/snapshot.png';
+import bloomberg from '../../images/bloomberg.png';
+import economist from '../../images/economist.png';
+import forbes from '../../images/forbes.jpeg';
 
 export default function Welcome({ login, register }) {
 
@@ -14,6 +18,7 @@ export default function Welcome({ login, register }) {
   const [passwordState, setPasswordState] = useState('');
   const [firstNameState, setFirstNameState] = useState('');
   const [lastNameState, setLastNameState] = useState('');
+
 
   return (
     <div className="Welcome">
@@ -24,16 +29,22 @@ export default function Welcome({ login, register }) {
       >
 
         <div id="welcome-message">
+          <img id="big-logo"src={appLogo} alt="logo goes here"></img>
           <h2>welcome to ace options</h2>
-          <img src={appLogo} alt="logo goes here"></img>
         </div>
 
         <div id="slogan">
           <p>options trading made simple</p>
         </div>
 
-        <div id="snapshot">
-          <img alt="...A SNAPSHOT OF THE APP GOES HERE"></img>
+        {/* <div id="seen">
+          as seen on
+        </div> */}
+
+        <div id="snapshot-div">
+          {/* <img id="snapshot" src={bloomberg} alt="bloomberg"></img>
+          <img id="snapshot" src={forbes} alt="forbes"></img>
+          <img id="snapshot" src={economist} alt="images"></img> */}
         </div>
 
       </div>
