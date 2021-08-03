@@ -41,7 +41,7 @@ function App() {
 
   async function optionToPortfolio(option) {
     await addOptionToPortfolio(option, userState.email);
-    setUserState((prevUser) => ({...prevUser, portfolio: [...prevUser.portfolio, option], balance: prevUser.balance - option.ask*option.contract_size}));
+    setUserState((prevUser) => ({...prevUser, portfolio: [...prevUser.portfolio, option], balance: prevUser.balance - option.ask}));
   }
 
   async function deleteFromWatchlist(option) {
@@ -51,7 +51,7 @@ function App() {
 
   async function deleteFromPortfolio(option) {
     await deleteOptionFromPortfolio(option, userState.email);
-    setUserState((prevUser) => ({...prevUser, portfolio: prevUser.portfolio.filter(userOption => userOption._id !== option._id), balance: prevUser.balance + option.bid*option.contract_size}));
+    setUserState((prevUser) => ({...prevUser, portfolio: prevUser.portfolio.filter(userOption => userOption._id !== option._id), balance: prevUser.balance + option.bid}));
   }
 
 
@@ -74,7 +74,6 @@ function App() {
         <Dashboard 
           userState={userState}
           setUserState={setUserState}
-          // getAllCompanies={getAllCompanies}
           optionToWatchlist={optionToWatchlist}
           optionToPortfolio={optionToPortfolio}
           deleteFromWatchlist={deleteFromWatchlist}

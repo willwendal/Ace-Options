@@ -67,8 +67,6 @@ export default function Register({ firstNameState, setFirstNameState, lastNameSt
         />
       </div>
 
-
-
         <button 
           type="submit"
           id="create-account-button"

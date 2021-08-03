@@ -57,7 +57,7 @@ export default function PortfolioOption({ option, deleteFromPortfolio }) {
         <div className="portfolio-options type">{option.option_type}</div>
         <div className="portfolio-options bid">{option.bid}</div>
         <div className="portfolio-options ask">{option.ask}</div>
-        <div className="portfolio-options buy-price">{Math.round(((option.ask*option.contract_size)*100) / 100).toFixed(2)}</div>
+        <div className="portfolio-options buy-price">{Math.round(((option.ask)*100) / 100).toFixed(2)}</div>
         <div className="portfolio-options strike">{option.strike}</div>
         <div className="portfolio-options exp-date">{option.expiration_date}</div>
         <div className="portfolio-options p-l">{profitLoss}</div>

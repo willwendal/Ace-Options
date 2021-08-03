@@ -8,7 +8,6 @@ import appLogo from '../../images/app_logo.png';
 
 export default function Navbar( { userState, authentication, setAuthentication } ) {
 
-
   return (
     <div className="Navbar">
 
@@ -21,12 +20,9 @@ export default function Navbar( { userState, authentication, setAuthentication }
         {/* <img src={appName} alt="ace-options"></img> */}
       </div>
       
-
       {authentication ?
 
         <div className="user-info">
-
-          
     
           <div id="email-navbar">
             <Email 
@@ -50,24 +46,23 @@ export default function Navbar( { userState, authentication, setAuthentication }
             </button>
           </div>
 
-
         </div>
       : 
-      <div id="not-auth-text">
+        <div id="not-auth-text">
 
-        <div id="home-button">
-          <h6>Home</h6>
+          <div id="home-button">
+            <h6>Home</h6>
+          </div>
+
+          <div id="login-button">
+            <h6>Our Technology</h6>
+          </div>
+
+          <div id="register-button">
+            <h6>Help Center</h6>
+          </div>
+
         </div>
-
-        <div id="login-button">
-          <h6>Our Technology</h6>
-        </div>
-
-        <div id="register-button">
-          <h6>Help Center</h6>
-        </div>
-
-      </div>
       }
 
     </div>

@@ -7,7 +7,6 @@ import './Dashboard.css';
 
 export default function Dashboard({ userState, setUserState, optionToWatchlist, optionToPortfolio, deleteFromWatchlist, deleteFromPortfolio }) {
 
-
   return (
     <div className="Dashboard">
 
