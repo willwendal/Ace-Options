@@ -7,6 +7,17 @@
   font-weight: bold;
 }
 
+#the-description {
+  display: inline-flex;
+  /* float: left; */
+  margin-right: 10em;
+}
+
+#the-buttons {
+  display: inline-flex;
+  /* float: right; */
+}
+
 #wl-to-pf-button {
   margin: 0em 0em 0em 1em;
   font-size: 0.6em;

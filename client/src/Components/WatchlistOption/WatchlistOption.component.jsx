@@ -7,15 +7,15 @@ export default function WatchlistOption({ option, optionToPortfolio, deleteFromW
   return (
     <div className="WatchlistOption">
       
-      <div>
+      <div id="the=description">
         {option.description}
       </div>
 
-      <div>
+      <div id="the-buttons">
         <button id="wl-to-pf-button" onClick={() => optionToPortfolio(option)}>🤑</button>
-      </div>
+    
 
-      <div>
+    
         <button id="remove-from-wl-button" onClick={() => deleteFromWatchlist(option)}>❌</button>
       </div>
         

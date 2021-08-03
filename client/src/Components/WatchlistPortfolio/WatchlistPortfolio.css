@@ -6,10 +6,12 @@
 }
 
 #wl-or-pf {
-  display: block;
+  /* display: block; */
+  display: grid;
+  grid-template-columns: auto;
   overflow: scroll;
 }
 
-.portfolio-headers.exp-date {
+/* .portfolio-headers.exp-date {
   min-width: 5em;
-}
+} */

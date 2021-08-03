@@ -6,7 +6,7 @@ import graphTwtr from '../../images/graph_Twtr.png';
 import graphCat from '../../images/graph_Cat.png';
 
 
-export default function OptionChain({ company, showList, optionToWatchlist, optionToPortfolio }) {
+export default function OptionChain({ company, showList, optionToWatchlist, optionToPortfolio, setSelectedView }) {
 
   // give this component a button to go back to the OptionsList component (i.e close the chain)
   // write the functionality to select one option from the chain and be able to add it to portfolio or watchlist
@@ -61,8 +61,15 @@ export default function OptionChain({ company, showList, optionToWatchlist, opti
             <div className="chain-info exp-date">{option.expiration_date}</div>
             <div className="chain-info type">{option.option_type}</div>
             <div className="chain-info small-buttons">
-              <button id="to-wl-button" onClick={() => optionToWatchlist(option)}>🔎</button>
-              <button id="to-pf-button" onClick={() => optionToPortfolio(option)}>🤑</button>
+              <button id="to-wl-button" 
+                onClick={() => {
+                  optionToWatchlist(option)
+                  setSelectedView(false)
+                }}>🔎</button>
+              <button id="to-pf-button" onClick={() => {
+                optionToPortfolio(option)
+                setSelectedView(true)
+              }}>🤑</button>
             </div>
           </div>
         ))}
@@ -77,9 +84,16 @@ export default function OptionChain({ company, showList, optionToWatchlist, opti
               <div className="chain-info cont-size">{option.contract_size}</div>
               <div className="chain-info exp-date">{option.expiration_date}</div>
               <div className="chain-info type">{option.option_type}</div>
-              <div id="small-buttons">
-                <button id="to-wl-button" onClick={() => optionToWatchlist(option)}>🔎</button>
-                <button id="to-pf-button" onClick={() => optionToPortfolio(option)}>🤑</button>
+              <div className="chain-info small-buttons">
+                <button id="to-wl-button" 
+                  onClick={() => {
+                    optionToWatchlist(option)
+                    setSelectedView(false)
+                  }}>🔎</button>
+                <button id="to-pf-button" onClick={() => {
+                  optionToPortfolio(option)
+                  setSelectedView(true)
+                }}>🤑</button>
               </div>
             </div>
         ))}

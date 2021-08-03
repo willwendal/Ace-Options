@@ -7,6 +7,9 @@ import './Dashboard.css';
 
 export default function Dashboard({ userState, setUserState, optionToWatchlist, optionToPortfolio, deleteFromWatchlist, deleteFromPortfolio }) {
 
+  const [selectedView, setSelectedView] = useState(false);
+  // default value?? if false --> show watchlist, otherwise --> show portfolio
+
   return (
     <div className="Dashboard">
 
@@ -17,6 +20,8 @@ export default function Dashboard({ userState, setUserState, optionToWatchlist, 
           optionToPortfolio={optionToPortfolio}
           deleteFromWatchlist={deleteFromWatchlist}
           deleteFromPortfolio={deleteFromPortfolio}
+          selectedView={selectedView}
+          setSelectedView={setSelectedView}
         />
       </div>
 
@@ -26,6 +31,9 @@ export default function Dashboard({ userState, setUserState, optionToWatchlist, 
           setUserState={setUserState}
           optionToWatchlist={optionToWatchlist}
           optionToPortfolio={optionToPortfolio}
+          selectedView={selectedView}
+          setSelectedView={setSelectedView}
+          setSelectedView={setSelectedView}
         />
       </div>
 

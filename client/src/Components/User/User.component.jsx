@@ -3,9 +3,9 @@ import WatchlistPortfolio from '../WatchlistPortfolio/WatchlistPortfolio.compone
 import './User.css';
 import mainBackground from '../../images/main_background.png';
 
-export default function User({ userState, setUserState, optionToPortfolio, deleteFromWatchlist, deleteFromPortfolio }) {
+export default function User({ userState, setUserState, optionToPortfolio, deleteFromWatchlist, deleteFromPortfolio, selectedView, setSelectedView }) {
 
-  const [selectedView, changeSelectedView] = useState(false);
+  // const [selectedView, changeSelectedView] = useState(false);
   // default value?? if false --> show watchlist, otherwise --> show portfolio ???
 
   return (
@@ -14,13 +14,13 @@ export default function User({ userState, setUserState, optionToPortfolio, delet
       <div id="buttons">
         <button 
           id="wl-button"
-          onClick={() => changeSelectedView(false)}
+          onClick={() => setSelectedView(false)}
           >🔎 Watchlist
         </button>
 
         <button 
           id="pf-button"
-          onClick={() => changeSelectedView(true)}
+          onClick={() => setSelectedView(true)}
           >🤑 Portfolio
         </button>
       </div>
