@@ -1,17 +1,14 @@
+import React, { useState } from 'react'
 import './Login.css'
 
-export default function Login({
-  emailState,
-  setEmailState,
-  passwordState,
-  setPasswordState,
-  login,
-}) {
+export default function Login({ login }) {
+  const [emailState, setEmailState] = useState('')
+  const [passwordState, setPasswordState] = useState('')
+
   const submitHandler = (e) => {
     e.preventDefault()
     login(emailState, passwordState)
   }
-  console.log('hello')
 
   return (
     <div className="Login">
