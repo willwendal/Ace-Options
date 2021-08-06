@@ -11,6 +11,7 @@ export default function Login({
     e.preventDefault()
     login(emailState, passwordState)
   }
+  console.log('hello')
 
   return (
     <div className="Login">
