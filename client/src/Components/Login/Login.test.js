@@ -12,21 +12,6 @@ describe('Log in Form', () => {
     expect(screen.getByRole('button', { name: /Go!/ })).toBeInTheDocument()
   })
 
-  it('should update the email and password value when typing', () => {
-    const setEmailState = jest.fn()
-    const setPasswordState = jest.fn()
-    const login = jest.fn()
-    render(<Login login={login} />)
-
-    const emailInput = screen.getByPlaceholderText(/Email/)
-    const passwordInput = screen.getByPlaceholderText(/Password/)
-
-    userEvent.type(emailInput, 'h')
-    expect(setEmailState).toHaveBeenLastCalled('h')
-    userEvent.type(passwordInput, 'x')
-    expect(setPasswordState).toHaveBeenLastCalled('x')
-
-  })
 
   it('calls onSubmit with the username and password with the correct credentials', async () => {
     const login = jest.fn()
