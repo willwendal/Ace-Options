@@ -18,10 +18,9 @@ const getUser = async (req, res) => {
 
 const createUser = async (req, res) => {
   try {
-    // console.log('req.body', req.body)
-    User.create(req.body)
+    const newUser = await User.create(req.body)
     res.status(201)
-    res.send()
+    res.send(newUser)
   } catch (err) {
     console.log(err)
     res.sendStatus(400)
@@ -44,7 +43,6 @@ const addToPortfolio = async (req, res) => {
   try {
     const { email, option } = req.body
     const user = await User.findOne({ email })
-    console.log(user)
     user.portfolio.push(option)
     user.balance = user.balance - option.ask * option.contract_size // multiply by the contract size
     // this should be user.balance = user.balance - req.body.option.ask*req.body.option.contract_size
