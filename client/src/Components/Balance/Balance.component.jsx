@@ -10,7 +10,7 @@ export default function Balance({ userState }) {
   return (
     <div className="Balance">
       Balance:
-      <div id="balance-box">{formatter.format(userState.balance)}</div>
+      <div id="balance-box" data-testid="test-balance-box">{formatter.format(userState.balance)}</div>
     </div>
   )
 }
