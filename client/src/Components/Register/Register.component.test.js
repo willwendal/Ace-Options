@@ -26,9 +26,7 @@ describe('Register Form', () => {
     const email = screen.getByPlaceholderText(/Email/)
     const password = screen.getByPlaceholderText(/Password/)
 
-    const submitBtn = screen.getByRole('button', { name: /Go!/i })
-
-  
+    const submitBtn = screen.getByRole('button', { name: /Create Account!/i })
 
     userEvent.type(firstName, 'John')
     userEvent.type(lastName, 'Doe')
