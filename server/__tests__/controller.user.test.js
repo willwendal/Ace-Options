@@ -1,5 +1,4 @@
 const superTest = require('supertest')
-// const createUser = require('../controllers/user')
 
 const mongoose = require('mongoose')
 
@@ -26,10 +25,28 @@ describe('A new user is posted to the database', () => {
       .post('/register')
       .set('Content-Type', 'application/json')
       .send({ firstName, lastName, email, password })
-      .expect(500)
+      .expect(200)
       .end(() => {
         User.find((err, users) => {
           expect(users.length).toBe(1)
+          done()
+        })
+      })
+  })
+
+  it('should retrieve the requested user from the database', (done) => {
+    const email = 'willy@thechocolatefactory.com'
+    const password = 'codeworks'
+
+    request
+      .post('/login')
+      .set('Content-Type', 'application/json')
+      .send({ email, password })
+      .expect(200)
+      .end(() => {
+        User.find((err, users) => {
+          console.log('ussssserrrssss', users[0])
+          expect(users[0].email).toBe(email)
           done()
         })
       })
