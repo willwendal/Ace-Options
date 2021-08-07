@@ -10,10 +10,6 @@ describe('A new user is posted to the database', () => {
 
   beforeAll(async () => {})
 
-  // afterEach(async () => {
-  //   await User.deleteMany()
-  // })
-
   afterAll(async () => {
     app.close()
     await mongoose.connection.dropDatabase()
@@ -36,11 +32,6 @@ describe('A new user is posted to the database', () => {
           expect(users.length).toBe(1)
           done()
         })
-        // expect(user.email).toBe(email)
       })
-
-    // const user = await User.findOne({ email })
-    // expect(user.email).toBe(email)
-    // done()
   })
 })
