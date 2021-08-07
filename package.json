@@ -4,7 +4,7 @@
   "description": "Ace Options Trading",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "NODE_ENV=test jest",
     "format": "prettier --write 'solo-andres/*.js"
   },
   "repository": {
@@ -28,6 +28,8 @@
   "devDependencies": {
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
-    "prettier": "2.3.2"
+    "jest": "^27.0.6",
+    "prettier": "2.3.2",
+    "supertest": "^6.1.4"
   }
 }
