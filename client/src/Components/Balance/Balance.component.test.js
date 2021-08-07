@@ -14,14 +14,14 @@ describe('Balance', () => {
     cleanup()
   })
 
-  test('It should render positive balance in the right format', () => {
+  test('should render positive balance in the right format', () => {
     const { getByTestId } = render(<Balance userState={mockedUser} />)
     const balanceDiv = getByTestId('test-balance-box')
 
     expect(balanceDiv).toHaveTextContent('$1,000,000.00')
   })
 
-  test('It should render negative balance in the right format', () => {
+  test('should render negative balance in the right format', () => {
     mockedUser.balance = -1000000
 
     const { getByTestId } = render(<Balance userState={mockedUser} />)
@@ -30,7 +30,7 @@ describe('Balance', () => {
     expect(balanceDiv).toHaveTextContent('-$1,000,000.00')
   })
 
-  test('It should render no balance in the right format', () => {
+  test('should render no balance in the right format', () => {
     mockedUser.balance = 0
 
     const { getByTestId } = render(<Balance userState={mockedUser} />)
