@@ -2,7 +2,6 @@ const superTest = require('supertest')
 // const createUser = require('../controllers/user')
 
 const mongoose = require('mongoose')
-const dbName = 'aceTest'
 
 describe('A new user is posted to the database', () => {
   const app = require('../index')
