@@ -7,7 +7,7 @@ import '@testing-library/jest-dom/extend-expect';
 test('It should render the email fo the user', () => {
 
   const mockedUser = {
-    firstName: 'Jhon',
+    firstName: 'John',
     lastName: 'Doe',
     email: 'johndoe@xxx.com'
   }
