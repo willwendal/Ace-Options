@@ -33,7 +33,6 @@ function App() {
 
   async function register(firstName, lastName, email, password) {
     const newUser = addUser(firstName, lastName, email, password)
-    console.log(newUser)
     setUserState(newUser)
     setAuthentication(true)
   }

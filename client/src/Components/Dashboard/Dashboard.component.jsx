@@ -37,7 +37,6 @@ export default function Dashboard({
           optionToPortfolio={optionToPortfolio}
           selectedView={selectedView}
           setSelectedView={setSelectedView}
-          setSelectedView={setSelectedView}
         />
       </div>
     </div>
