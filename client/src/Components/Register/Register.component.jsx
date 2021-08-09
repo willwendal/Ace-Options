@@ -6,7 +6,7 @@ export default function Register({
   register,
 }) {
 
-  const [firstName, setFirstName] = useState('')
+  const [firstNameState, setFirstNameState] = useState('')
   const [lastNameState, setLastNameState] = useState('')
   const [emailState, setEmailState] = useState('')
   const [passwordState, setPasswordState] = useState('')
