@@ -1,16 +1,12 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 
 import './Register.css'
 
-export default function Register({
-  register,
-}) {
-
-  const [firstName, setFirstName] = useState('')
+export default function Register({ register }) {
+  const [firstNameState, setFirstNameState] = useState('')
   const [lastNameState, setLastNameState] = useState('')
   const [emailState, setEmailState] = useState('')
   const [passwordState, setPasswordState] = useState('')
-
 
   const submitHandler = async () => {
     register(firstNameState, lastNameState, emailState, passwordState)
