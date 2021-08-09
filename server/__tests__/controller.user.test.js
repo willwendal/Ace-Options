@@ -82,7 +82,8 @@ describe('A new user is posted to the database', () => {
             .expect(200)
             .end(() => {
               User.find((err, users) => {
-                expect(users[0].watchlist).toContain(option)
+                expect(users[0].watchlist.symbol).toBe('symbol')
+                expect(users[0].watchlist.description).toBe('description')
                 done()
               })
           })
