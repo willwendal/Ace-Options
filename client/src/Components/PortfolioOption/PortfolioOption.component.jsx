@@ -48,17 +48,17 @@ export default function PortfolioOption({ option, deleteFromPortfolio }) {
   return (
     <div className="PortfolioOption">
       <div id="the-actual-portfolio">
-        <div className="portfolio-options description">
+        <div className="portfolio-options description" data-testid="test-description">
           {option.description.slice(0, 4)}
         </div>
-        <div className="portfolio-options type">{option.option_type}</div>
-        <div className="portfolio-options bid">{option.bid}</div>
-        <div className="portfolio-options ask">{option.ask}</div>
-        <div className="portfolio-options buy-price">
+        <div className="portfolio-options type" data-testid="test-type">{option.option_type}</div>
+        <div className="portfolio-options bid" data-testid="test-bid">{option.bid}</div>
+        <div className="portfolio-options ask" data-testid="test-ask">{option.ask}</div>
+        <div className="portfolio-options buy-price" data-testid="test-buy-price">
           {Math.round((option.ask * 100) / 100).toFixed(2)}
         </div>
-        <div className="portfolio-options strike">{option.strike}</div>
-        <div className="portfolio-options exp-date">
+        <div className="portfolio-options strike" data-testid="test-strike">{option.strike}</div>
+        <div className="portfolio-options exp-date" data-testid="test-exp-date">
           {option.expiration_date}
         </div>
         <div className="portfolio-options p-l">{profitLoss}</div>
