@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import WatchlistPortfolio from '../WatchlistPortfolio/WatchlistPortfolio.component'
 import './User.css'
 import mainBackground from '../../images/main_background.png'
@@ -16,13 +16,13 @@ export default function User({
   // default value?? if false --> show watchlist, otherwise --> show portfolio ???
 
   return (
-    <div className="User" style={{ backgroundImage: `url(${mainBackground})` }}>
+    <div data-testid='user' className="User" style={{ backgroundImage: `url(${mainBackground})` }}>
       <div id="buttons">
-        <button id="wl-button" onClick={() => setSelectedView(false)}>
+        <button data-testid='watchListBtn' id="wl-button" onClick={() => setSelectedView(false)}>
           🔎 Watchlist
         </button>
 
-        <button id="pf-button" onClick={() => setSelectedView(true)}>
+        <button data-testid='portfolioBtn' id="pf-button" onClick={() => setSelectedView(true)}>
           🤑 Portfolio
         </button>
       </div>
