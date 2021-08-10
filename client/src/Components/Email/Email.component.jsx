@@ -1,4 +1,5 @@
-import './Email.css'
+import './Email.css';
+import React from 'react';
 
 export default function Email({ userState }) {
   return (
