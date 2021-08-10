@@ -1,4 +1,5 @@
-import './Balance.css'
+import './Balance.css';
+import React from 'react';
 
 export default function Balance({ userState }) {
   const formatter = new Intl.NumberFormat('en-US', {

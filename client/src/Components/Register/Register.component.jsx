@@ -2,14 +2,10 @@ import React, { useState } from 'react'
 
 import './Register.css'
 
-<<<<<<< HEAD
 export default function Register({
   register,
 }) {
 
-=======
-export default function Register({ register }) {
->>>>>>> beffb36ee1d5b9845bb41a5abf4e4b13d806aa1d
   const [firstNameState, setFirstNameState] = useState('')
   const [lastNameState, setLastNameState] = useState('')
   const [emailState, setEmailState] = useState('')

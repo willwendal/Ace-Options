@@ -1,10 +1,14 @@
 import Email from './Email.component.jsx';
 
-import { render } from '@testing-library/react';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import toBeInTheDocument from '@testing-library/jest-dom';
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 
 import '@testing-library/jest-dom/extend-expect';
 
-test('It should render the email fo the user', () => {
+test('It should render the email of the user', () => {
 
   const mockedUser = {
     firstName: 'John',
@@ -12,8 +16,8 @@ test('It should render the email fo the user', () => {
     email: 'johndoe@xxx.com'
   }
 
-  const { getByTestId } = render(<Email userState={mockedUser}/>);
-  const emailDiv = getByTestId('test-email-box');
+  render(<Email userState={mockedUser}/>);
+  const emailDiv = screen.getByTestId('test-email-box');
 
   expect(emailDiv).toBeInTheDocument();
   expect(emailDiv).toHaveTextContent('johndoe@xxx.com');

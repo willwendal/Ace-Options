@@ -51,43 +51,4 @@ describe('A new user is posted to the database', () => {
         })
       })
   })
-
-  it('should add users toi watchlist', done => {
-    const firstName = 'John';
-    const lastName = 'Doe';
-    const email = 'johndoe@xxx.com';
-    const password = 'xxx';
-
-    const option = {
-      symbol: 'symbol',
-      description: 'description'
-    }
-
-    request
-      .post('/register')
-      .set('Content-Type', 'application/json')
-      .send({ firstName, lastName, email, password })
-      .expect(200)
-      .then(() => {
-        request
-          .post('/addToWl')
-          .set('Content-Type', 'application/json')
-          .send({ email, option })
-          .expect(200)
-          .then(() => {
-            request
-            .post('/login')
-            .set('Content-Type', 'application/json')
-            .send({ email, password })
-            .expect(200)
-            .end(() => {
-              User.find((err, users) => {
-                expect(users[0].watchlist.symbol).toBe('symbol')
-                expect(users[0].watchlist.description).toBe('description')
-                done()
-              })
-          })
-      })
-    })
-  })
 })
