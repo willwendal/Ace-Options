@@ -12,7 +12,7 @@ export default function WatchlistPortfolio({
   deleteFromPortfolio,
 }) {
   const [titleState, setTitleState] = useState('Watchlist')
-  // console.log('selectedView', selectedView)
+  console.log()
 
   const watchlistItems = userState.watchlist.map((option, i) => {
     return (
