@@ -1,4 +1,4 @@
-import PortfolioOption from './Login.component'
+import PortfolioOption from './PortfolioOption.component'
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
@@ -17,28 +17,30 @@ const mockedOption = {
 
 describe('Portfolio Option', () => {
   it('Should display the correct informations', () => {
-    const { getByTestId } = render(<PortfolioOption option={mockedOption} deleteFromPortfolio={deleteFromPortfolio} />)
+    const deleteFromPortfolio = jest.fn();
+
+    render(<PortfolioOption option={mockedOption} deleteFromPortfolio={deleteFromPortfolio} />)
     
-    const descriptionField = getByTestId('test-description');
-    expect(descriptionField).toHaveTextContent('desc');
+    const descriptionField = screen.getByTestId('test-description');
+    expect(descriptionField.textContent).toBe('desc');
 
-    const typeField = getByTestId('test-type');
-    expect(typeField).toHaveTextContent('type');
+    const typeField = screen.getByTestId('test-type');
+    expect(typeField.textContent).toBe('type');
 
-    const bidField = getByTestId('test-bid');
-    expect(bidField).toHaveTextContent('2');
+    const bidField = screen.getByTestId('test-bid');
+    expect(bidField.textContent).toBe('2');
 
-    const askField = getByTestId('test-ask');
-    expect(askField).toHaveTextContent('5');
+    const askField = screen.getByTestId('test-ask');
+    expect(askField.textContent).toBe('5');
 
-    const buyPriceField = getByTestId('test-buy-price');
-    expect(buyPriceField).toHaveTextContent('5.00');
+    const buyPriceField = screen.getByTestId('test-buy-price');
+    expect(buyPriceField.textContent).toBe('5.00');
 
-    const strikeField = getByTestId('test-strike');
-    expect(strikeField).toHaveTextContent('10');
+    const strikeField = screen.getByTestId('test-strike');
+    expect(strikeField.textContent).toBe('10');
 
-    const expDateField = getByTestId('test-exp-date');
-    expect(expDateField).toHaveTextContent('date');
+    const expDateField = screen.getByTestId('test-exp-date');
+    expect(expDateField.textContent).toBe('date');
   })
 
   it('Should properly call deleteFromPortfolio when the button is clicked', () => {
@@ -49,7 +51,7 @@ describe('Portfolio Option', () => {
 
     userEvent.click(deleteBtn);
 
-    expect(deleteFromPortfolio).toHaveBeenClickedWith(mockedOption);
+    expect(deleteFromPortfolio).toHaveBeenCalledWith(mockedOption);
   })
 
 
