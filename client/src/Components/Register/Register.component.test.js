@@ -1,5 +1,7 @@
 import React from 'react'
 import Register from './Register.component.jsx'
+import ReactDOM from 'react-dom'
+import toBeInTheDocument from '@testing-library/jest-dom'
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 
@@ -7,7 +9,8 @@ import '@testing-library/jest-dom/extend-expect'
 
 describe('Register Form', () => {
   it('should render the basic fields', () => {
-    render(<Register />)
+    const register = jest.fn()
+    render(<Register register={register}/>)
     expect(screen.getByPlaceholderText(/First Name/)).toBeInTheDocument()
     expect(screen.getByPlaceholderText(/Last Name/)).toBeInTheDocument()
     expect(screen.getByPlaceholderText(/Email/)).toBeInTheDocument()
