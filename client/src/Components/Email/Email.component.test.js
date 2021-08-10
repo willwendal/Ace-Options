@@ -8,7 +8,7 @@ import userEvent from '@testing-library/user-event';
 
 import '@testing-library/jest-dom/extend-expect';
 
-test('It should render the email fo the user', () => {
+test('It should render the email of the user', () => {
 
   const mockedUser = {
     firstName: 'John',
