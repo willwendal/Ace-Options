@@ -13,6 +13,7 @@ describe('Watch List Option', () => {
     }
     const optionToPortfolio = jest.fn()
     const deleteFromWatchlist = jest.fn()
+    
     render(
       <WatchlistOption
         option={option}
@@ -20,8 +21,10 @@ describe('Watch List Option', () => {
         deleteFromWatchlist={deleteFromWatchlist}
       />,
     )
+
     const element = screen.getByTestId('watchlistoption')
     expect(element).toBeInTheDocument()
+    expect(element.textContent).toBe('11 august PUT')
   })
 
   it('delete and add functions should be called with the right arguments', async () => {
@@ -29,6 +32,7 @@ describe('Watch List Option', () => {
       description: '11 august PUT',
       _id: '6gdjsfksdjal',
     }
+
     const optionToPortfolio = jest.fn()
     const deleteFromWatchlist = jest.fn()
 
@@ -41,14 +45,11 @@ describe('Watch List Option', () => {
     )
 
     const btnAdd = screen.getByTestId('optiontoportfolio')
-    await userEvent.click(btnAdd)
-
+    userEvent.click(btnAdd)
     expect(optionToPortfolio).toHaveBeenCalledWith(option)
 
     const btnDelete = screen.getByTestId('deletefromwatchlist')
-
-    await userEvent.click(btnDelete)
-
+    userEvent.click(btnDelete)
     expect(deleteFromWatchlist).toHaveBeenCalledWith(option)
   })
 })

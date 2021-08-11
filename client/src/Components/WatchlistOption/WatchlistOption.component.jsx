@@ -1,6 +1,5 @@
 import './WatchlistOption.css'
-import Option from '../../types/Option'
-
+import React from 'react'
 
 export default function WatchlistOption({
   option,
@@ -8,8 +7,8 @@ export default function WatchlistOption({
   deleteFromWatchlist
 }) {
   return (
-    <div data-testid="watchlistoption" className="WatchlistOption">
-      <div id="the=description">{option.description}</div>
+    <div className="WatchlistOption">
+      <div id="the=description" data-testid="watchlistoption">{option.description}</div>
 
       <div id="the-buttons">
         <button
