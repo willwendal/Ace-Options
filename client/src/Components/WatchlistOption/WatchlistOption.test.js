@@ -5,8 +5,8 @@ import toBeInTheDocument from '@testing-library/jest-dom'
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 
-describe.only('Watch List Option', () => {
-  test.only('should display the correct elements on screen', () => {
+describe('Watch List Option', () => {
+  it('should display the correct elements on screen', () => {
     const option = {
       description: '11 august PUT',
       _id: '6gdjsfksdjal',

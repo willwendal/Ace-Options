@@ -45,7 +45,6 @@ describe('A new user is posted to the database', () => {
       .expect(200)
       .end(() => {
         User.find((err, users) => {
-          console.log('ussssserrrssss', users[0])
           expect(users[0].email).toBe(email)
           done()
         })
