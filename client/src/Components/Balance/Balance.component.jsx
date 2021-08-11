@@ -1,8 +1,7 @@
 import './Balance.css';
 import React from 'react';
-import UserState from '../../types/UserState'
 
-export default function Balance(userState: UserState) {
+export default function Balance({userState}) {
   const formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
