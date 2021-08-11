@@ -1,8 +1,7 @@
 import './Email.css'
 import React from 'react'
-import UserState from '../../types/UserState'
 
-export default function Email(userState: UserState) {
+export default function Email({userState}) {
   console.log(userState)
   return (
     <div className="Email">
