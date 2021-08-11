@@ -15,7 +15,7 @@ describe('A new user is posted to the database', () => {
     await mongoose.disconnect()
   })
 
-  it('should save a user to the database', (done) => {
+  test('should save a user to the database', (done) => {
     const firstName = 'Willy'
     const lastName = 'Wonka'
     const email = 'willy@thechocolatefactory.com'
@@ -25,7 +25,7 @@ describe('A new user is posted to the database', () => {
       .post('/register')
       .set('Content-Type', 'application/json')
       .send({ firstName, lastName, email, password })
-      .expect(200)
+      .expect(201)
       .end(() => {
         User.find((err, users) => {
           expect(users.length).toBe(1)
@@ -34,7 +34,7 @@ describe('A new user is posted to the database', () => {
       })
   })
 
-  it('should retrieve the requested user from the database', (done) => {
+  test('should retrieve the requested user from the database', (done) => {
     const email = 'willy@thechocolatefactory.com'
     const password = 'codeworks'
 
@@ -52,22 +52,22 @@ describe('A new user is posted to the database', () => {
       })
   })
 
-  it('should add users toi watchlist', done => {
-    const firstName = 'John';
-    const lastName = 'Doe';
-    const email = 'johndoe@xxx.com';
-    const password = 'xxx';
+  test('should add users to watchlist', (done) => {
+    const firstName = 'John'
+    const lastName = 'Doe'
+    const email = 'johndoe@xxx.com'
+    const password = 'xxx'
 
     const option = {
       symbol: 'symbol',
-      description: 'description'
+      description: 'description',
     }
 
     request
       .post('/register')
       .set('Content-Type', 'application/json')
       .send({ firstName, lastName, email, password })
-      .expect(200)
+      .expect(201)
       .then(() => {
         request
           .post('/addToWl')
@@ -76,18 +76,18 @@ describe('A new user is posted to the database', () => {
           .expect(200)
           .then(() => {
             request
-            .post('/login')
-            .set('Content-Type', 'application/json')
-            .send({ email, password })
-            .expect(200)
-            .end(() => {
-              User.find((err, users) => {
-                expect(users[0].watchlist.symbol).toBe('symbol')
-                expect(users[0].watchlist.description).toBe('description')
-                done()
+              .post('/login')
+              .set('Content-Type', 'application/json')
+              .send({ email, password })
+              .expect(200)
+              .end(() => {
+                User.find((err, users) => {
+                  expect(users[0].watchlist.symbol).toBe('symbol')
+                  expect(users[0].watchlist.description).toBe('description')
+                  done()
+                })
               })
           })
       })
-    })
   })
 })

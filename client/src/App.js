@@ -9,19 +9,15 @@ import {
   deleteOptionFromWatchlist,
   deleteOptionFromPortfolio,
 } from './Services/ApiService'
-// remember to import context here after creating it
+
 import './App.css'
 import Navbar from './Components/Navbar/Navbar.component'
 import Welcome from './Components/Welcome/Welcome.component'
 import Dashboard from './Components/Dashboard/Dashboard.component'
 
 function App() {
-  // user state
   const [userState, setUserState] = useState({})
-
-  // authentication state
   const [authentication, setAuthentication] = useState(false)
-  // if false --> user not logged in, true --> user is logged in
 
   // handler functions
 
@@ -79,7 +75,6 @@ function App() {
     <div className="App">
       <Navbar
         userState={userState}
-        authentication={authentication}
         authentication={authentication}
         setAuthentication={setAuthentication}
       />

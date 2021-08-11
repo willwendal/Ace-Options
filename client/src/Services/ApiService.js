@@ -1,5 +1,3 @@
-// import fetch from "cross-fetch";
-
 const { default: fetch } = require('cross-fetch')
 
 const baseUrl = 'http://localhost:3001/'

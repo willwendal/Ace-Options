@@ -4,6 +4,7 @@ import graphGoogl from '../../images/graph_Googl.png'
 import graphLulu from '../../images/graph_Lulu.png'
 import graphTwtr from '../../images/graph_Twtr.png'
 import graphCat from '../../images/graph_Cat.png'
+import Graph from '../Graphs/Graph.component'
 
 export default function OptionChain({
   company,
@@ -29,8 +30,6 @@ export default function OptionChain({
 
   return (
     <div className="OptionChain">
-      {/* <h4>{company.chain.expiration1}</h4> */}
-
       <div id="div-back-button">
         <button id="back-button" onClick={() => showList(false)}>
           ⬅️ Back
@@ -123,10 +122,8 @@ export default function OptionChain({
       </div>
 
       <div>
-        <img id="graph" src={graph} alt="GRAPH GOES HERE"></img>
+        <Graph />
       </div>
     </div>
   )
 }
-
-// {companiesList.map(company => (<ListOption key={company._id} company={company}
