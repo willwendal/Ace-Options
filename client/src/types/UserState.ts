@@ -1,4 +1,4 @@
-type UserState = {
+interface UserState {
   firstName: string,
   lastName: string,
   email: string,

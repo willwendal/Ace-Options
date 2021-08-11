@@ -1,19 +1,17 @@
 import './WatchlistOption.css'
-import React from 'react'
 import Option from '../../types/Option'
 
-type Props = {
+interface Props {
+  option: Option,
   optionToPortfolio: (option: Option) => void,
   deleteFromWatchlist: (option: Option) => void
-  
-
 }
 
 export default function WatchlistOption({
-  option: Option,
-  optionToPortfolio: Props.optionToPortfolio,
-  deleteFromWatchlist: Props.deleteFromWatchlist
-}) {
+  option,
+  optionToPortfolio,
+  deleteFromWatchlist
+}: Props) {
   return (
     <div data-testid="watchlistoption" className="WatchlistOption">
       <div id="the=description">{option.description}</div>
