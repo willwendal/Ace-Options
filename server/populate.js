@@ -96,8 +96,6 @@ const populate = async () => {
     for (let i = 0; i < companies.length; i++) {
       const option = { chain: {} }
 
-      console.log('api key', process.env.API_KEY)
-
       const res = await fetch(
         `https://sandbox.tradier.com/v1/markets/search?q=${companies[i]}&indexes=false`,
         {
@@ -108,8 +106,6 @@ const populate = async () => {
           },
         },
       )
-
-      console.log('first fetch -----', res.status, res.ok)
 
       const company = await res.json()
 

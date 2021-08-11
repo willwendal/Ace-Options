@@ -1,5 +1,4 @@
 import { LineChart, XAxis, Tooltip, Line, CartesianGrid, YAxis } from 'recharts'
-import { useState, useEffect } from 'react'
 import './Graph.css'
 
 const data = [
@@ -11,39 +10,12 @@ const data = [
 ]
 
 export default function Graph() {
-  const [marketHistory, setMarketHistory] = useState('')
-
-  function getHistoricalData() {
-    fetch('https://sandbox.tradier.com/v1/markets/history', {
-      method: 'GET',
-      qs: {
-        symbol: 'AAPL',
-        interval: 'daily',
-        start: '2019-01-04',
-        end: '2020-05-04',
-      },
-      headers: {
-        Authorization: `Bearer wvP7ieyXcMVQgpYka5OevRLcDjIu`,
-        Accept: 'application/json',
-      },
-    })
-      .then((result) => result.json())
-      .then((data) => console.log(data))
-  }
-
-  // useEffect(() => {
-  //   getHistoricalData().then((data) => setMarketHistory(data))
-  // }, [])
-
-  getHistoricalData()
-  console.log(marketHistory)
-
   return (
     <div>
       <LineChart
         width={400}
         height={400}
-        data={marketHistory}
+        data={data}
         margin={{ top: 5, right: 20, left: 5, bottom: 0 }}
       >
         <XAxis dataKey="month" />

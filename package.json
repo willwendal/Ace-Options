@@ -19,6 +19,7 @@
   "homepage": "https://github.com/andresolive/solo-andres#readme",
   "dependencies": {
     "@babel/preset-env": "^7.15.0",
+    "axios": "^0.21.1",
     "config": "^3.3.6",
     "cors": "^2.8.5",
     "cross-fetch": "^3.1.4",
