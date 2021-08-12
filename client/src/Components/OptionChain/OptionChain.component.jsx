@@ -4,6 +4,7 @@ import graphGoogl from '../../images/graph_Googl.png'
 import graphLulu from '../../images/graph_Lulu.png'
 import graphTwtr from '../../images/graph_Twtr.png'
 import graphCat from '../../images/graph_Cat.png'
+import Graph from '../Graphs/Graph.component'
 
 export default function OptionChain({
   company,
@@ -12,25 +13,8 @@ export default function OptionChain({
   optionToPortfolio,
   setSelectedView,
 }) {
-  // give this component a button to go back to the OptionsList component (i.e close the chain)
-  // write the functionality to select one option from the chain and be able to add it to portfolio or watchlist
-
-  let graph = ''
-
-  if (company.symbol === 'GOOGL') {
-    graph = graphGoogl
-  } else if (company.symbol === 'LULU') {
-    graph = graphLulu
-  } else if (company.symbol === 'TWTR') {
-    graph = graphTwtr
-  } else if (company.symbol === 'CAT') {
-    graph = graphCat
-  }
-
   return (
     <div className="OptionChain">
-      {/* <h4>{company.chain.expiration1}</h4> */}
-
       <div id="div-back-button">
         <button id="back-button" onClick={() => showList(false)}>
           ⬅️ Back
@@ -123,10 +107,8 @@ export default function OptionChain({
       </div>
 
       <div>
-        <img id="graph" src={graph} alt="GRAPH GOES HERE"></img>
+        <Graph />
       </div>
     </div>
   )
 }
-
-// {companiesList.map(company => (<ListOption key={company._id} company={company}
