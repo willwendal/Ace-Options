@@ -16,7 +16,6 @@ export default function ListOption({ company, selectOption }) {
         <nav id="nav">
           <ul>
             <li>
-              {/* <Link to="/chain">{company.symbol}</Link> */}
               <h6
                 id="information"
                 onClick={() => {
@@ -28,12 +27,10 @@ export default function ListOption({ company, selectOption }) {
             </li>
 
             <li>
-              {/* <Link to="/chain">{company.description}</Link> */}
               <h6 id="information">{company.description}</h6>
             </li>
 
             <li>
-              {/* <Link to="/chain">{company.chain.expiration1[0].expiration_date}</Link> */}
               <h6 id="information">
                 {company.chain.expiration1[0].expiration_date}
               </h6>
@@ -51,11 +48,6 @@ export default function ListOption({ company, selectOption }) {
           component={() => <OptionChain company={company} />}
         />
       </Switch>
-
-      {/* <a href="/chain">{company.symbol}</a>
-        <p></p>
-        <a href="http://localhost:3000/chain">{company.description}</a>
-        <p></p> */}
     </Router>
   )
 }
