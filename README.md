@@ -20,6 +20,6 @@ React, MongoDB, Express, Jest
 * Fork & clone this repo
 * Run npm i in main directory
 * Adjust the necessary env variables to match your system
-* Run the script file to populate the db with the relevant companies 
+* Run the populate.js script file to populate the db with the relevant companies 
 * You will need an API key from to get the live data Tradier Developer
 * Run npm start
