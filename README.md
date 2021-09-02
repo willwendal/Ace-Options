@@ -11,8 +11,8 @@ Ace Options is a trading platform for beginners to learn about derivatives and o
 React, MongoDB, Express, Jest
 
 # Developer Team:
-Andres Olive - Main Developer
-Will Johnson - Test Engineer 
+* Andres Olive - Main Developer
+* Will Johnson - Test Engineer 
 Maria Pallares - Test Engineer
 Alex Ferrante - Test Engineer
 
