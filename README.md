@@ -15,3 +15,11 @@ Andres Olive - Main Developer
 Will Johnson - Test Engineer 
 Maria Pallares - Test Engineer
 Alex Ferrante - Test Engineer
+
+Running this project:
+
+Fork & clone this repo
+Run npm i in main directory
+Adjust the necessary env variables to match your system
+(You will need an API key for )
+Run npm start
