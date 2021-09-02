@@ -13,8 +13,8 @@ React, MongoDB, Express, Jest
 # Developer Team:
 * Andres Olive - Main Developer
 * Will Johnson - Test Engineer 
-Maria Pallares - Test Engineer
-Alex Ferrante - Test Engineer
+* Maria Pallares - Test Engineer
+* Alex Ferrante - Test Engineer
 
 # Running this project:
 Fork & clone this repo
